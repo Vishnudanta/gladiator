@@ -9,5 +9,9 @@ import { AuthService } from '../../services/auth.service';
   templateUrl: './get-orders.component.html',
   styleUrls: ['./get-orders.component.scss']
 })
-export class GetOrdersComponent //todo: complete missing code
+export class GetOrdersComponent {
+
+  
+  itemForm!:FormGroup;
+
 }

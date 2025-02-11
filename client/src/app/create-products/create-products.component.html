@@ -1,1 +1,109 @@
-//todo: complete missing code
+ <div class="row mt-3">
+    <div class="card">
+        <div class="card-header">Product Information</div>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Sr#</th>
+                        <th>Product Name</th>
+                        <th>Price</th> 
+                        <th>Description</th>                           
+                            
+                  
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let product of productList">
+                      <td>{{product.id}}</td>
+                        <td>{{product.name}}</td>
+                        <td>{{product.price}}</td>
+                       
+                        <td>{{product.description}}</td>
+                  
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+  </div>
+
+
+   -->
+
+   <!-- product-management.component.html -->
+<!-- <div class="container">
+    <h1>Product Management</h1>
+    <form [formGroup]="itemForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="name">Product Name:</label>
+        <input id="name" type="text" class="form-control" formControlName="name">
+        <div *ngIf="itemForm.get('name')?.invalid && itemForm.get('name')?.dirty || itemForm.get('name')?.touched">
+        <small *ngIf="itemForm.get('name')?.hasError('required')">
+        Product Name is Required.
+        </small>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea id="description" class="form-control" formControlName="description"></textarea>
+        <div *ngIf="itemForm.get('description')?.invalid && itemForm.get('description')?.dirty || itemForm.get('description')?.touched">
+            <small *ngIf="itemForm.get('description')?.hasError('required')">
+            Product Description is Required.
+            </small>
+            </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="price">Price:</label>
+        <input id="price" type="number" class="form-control" formControlName="price">
+        <div *ngIf="itemForm.get('price')?.invalid && itemForm.get('price')?.dirty || itemForm.get('price')?.touched">
+        <small *ngIf="itemForm.get('price')?.hasError('required')">
+        Product Price is Required.
+        </small>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="stockQuantity">Stock Quantity:</label>
+        <input id="stockQuantity" type="number" class="form-control" formControlName="stockQuantity">
+        <div *ngIf="itemForm.get('stockQuantity')?.invalid && itemForm.get('stockQuantity')?.dirty || itemForm.get('stockQuantity')?.touched">
+            <small *ngIf="itemForm.get('stockQuantity')?.hasError('required')">
+           Stock Quantity is Required.
+            </small>
+            </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="manufacturerId">Manufacturer ID:</label>
+        <input id="manufacturerId" type="text" class="form-control" formControlName="manufacturerId">
+        <div *ngIf="itemForm.get('manufacturerId')?.invalid && itemForm.get('manufacturerId')?.dirty || itemForm.get('manufacturerId')?.touched">
+            <small *ngIf="itemForm.get('manufacturerId')?.hasError('required')">
+           Stock Quantity is Required.
+            </small>
+            </div>
+      </div>
+  
+      <button type="submit" class="btn btn-primary">{{ updateId ? 'Update Product' : 'Create Product' }}</button>
+    </form>
+  
+    <div *ngIf="showMessage" class="alert alert-success mt-3">
+      {{ responseMessage }}
+    </div>
+  
+    <div *ngIf="showError" class="alert alert-danger mt-3">
+      {{ errorMessage }}
+    </div>
+  
+    <h2>Product List</h2>
+    <ul class="list-group">
+      <li *ngFor="let product of productList" class="list-group-item">
+        {{ product.name }} - {{ product.price }} - {{ product.stockQuantity }}
+        <button class="btn btn-secondary float-right" (click)="edit(product)">Edit</button>
+      </li>
+    </ul>
+  </div>-->

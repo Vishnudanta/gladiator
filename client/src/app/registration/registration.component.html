@@ -1,1 +1,77 @@
-//todo: complete missing code
+<!-- <p>wassuuuuuuuuuup</p>
+
+
+<form [formGroup]="itemForm" (ngSubmit)="onRegister()">
+    <div>
+        <label>USERNAME</label>
+        <input type="text" placeholder="USERNAME" formControlName="username" required>
+        <div *ngIf="itemForm.get('username')?.invalid && (itemForm.get('username')?.dirty || itemForm.get('username')?.touched)">
+            <small *ngIf="itemForm.get('username')?.hasError('required')">Username is required.</small>
+        </div>
+    </div>
+    <div>
+        <label>E-MAIL</label>
+        <input type="email" placeholder="John123@gmail.com" formControlName="email" required>
+        <div *ngIf="itemForm.get('email')?.invalid && (itemForm.get('email')?.dirty || itemForm.get('email')?.touched)">
+            <small *ngIf="itemForm.get('email')?.hasError('required')">Email is required.</small>
+        </div>
+    </div>
+    <div>
+        <label>PASSWORD</label>
+        <input type="password" placeholder="PASSWORD" formControlName="password" required>
+        <div *ngIf="itemForm.get('password')?.invalid && (itemForm.get('password')?.dirty || itemForm.get('password')?.touched)">
+            <small *ngIf="itemForm.get('password')?.hasError('required')">Password is required.</small>
+            <small *ngIf="itemForm.get('password')?.hasError('pattern')">Format is Required.</small>
+        </div>
+    </div>
+   <div>
+    <label for="Role">ROLE</label>
+    <select name="Role">
+        <option value="USER">USER</option>
+        <option value="ADMIN">ADMIN</option>
+    </select>
+   </div>
+   <button type="submit" value="onRegister()" [disabled]="itemForm.invalid">REGISTER</button>
+
+</form>
+<div *ngIf="showMessage">
+{{responseMessage}}
+</div> -->
+
+
+
+<form [formGroup]="itemForm" (ngSubmit)="onRegister()" class="container mt-4">
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" class="form-control" placeholder="Enter username" formControlName="username" required>
+        <div *ngIf="itemForm.get('username')?.invalid && (itemForm.get('username')?.dirty || itemForm.get('username')?.touched)">
+            <small class="text-danger" *ngIf="itemForm.get('username')?.hasError('required')">Username is required.</small>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" class="form-control" placeholder="Enter email" formControlName="email" required>
+        <div *ngIf="itemForm.get('email')?.invalid && (itemForm.get('email')?.dirty || itemForm.get('email')?.touched)">
+            <small class="text-danger" *ngIf="itemForm.get('email')?.hasError('required')">Email is required.</small>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" class="form-control" placeholder="Enter password" formControlName="password" required>
+        <div *ngIf="itemForm.get('password')?.invalid && (itemForm.get('password')?.dirty || itemForm.get('password')?.touched)">
+            <small class="text-danger" *ngIf="itemForm.get('password')?.hasError('required')">Password is required.</small>
+            <small class="text-danger" *ngIf="itemForm.get('password')?.hasError('pattern')">Format is required.</small>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="role">Role</label>
+        <select id="role" class="form-control" formControlName="role">
+            <option value="USER">User</option>
+            <option value="ADMIN">Admin</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block" [disabled]="itemForm.invalid">Register</button>
+</form>
+<div *ngIf="showMessage" class="mt-3">
+    <div class="alert alert-info">{{responseMessage}}</div>
+</div>
